@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const isBacklog = path.includes("backlog_health");
   const isDeps = path.includes("dependencies");
 
-  fetch("jira_data.csv")
+fetch("docs/jira_data.csv")
     .then((res) => res.text())
     .then((data) => {
       const rows = data.trim().split("\n");
