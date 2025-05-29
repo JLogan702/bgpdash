@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>backlog_health.html</title>
+  <meta charset="UTF-8">
+  <title>Backlog Health</title>
+  <script src="dashboard_logic.js" defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    .team-section {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .stoplight {
+      width: 30px;
+      vertical-align: middle;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-<h1>Backlog Health.Html</h1>
-<p>This is a placeholder for backlog_health.html.</p>
+  <h1>Backlog Health</h1>
+  
+<div id="backlog-health-content">Loading backlog health from jira_data.csv...</div>
+
+  <footer>
+    📘 Metrics calculated per <a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum Best Practices</a>
+  </footer>
 </body>
 </html>

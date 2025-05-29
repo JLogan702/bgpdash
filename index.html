@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>index.html</title>
+  <meta charset="UTF-8">
+  <title>Program Summary</title>
+  <script src="dashboard_logic.js" defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    .team-section {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .stoplight {
+      width: 30px;
+      vertical-align: middle;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-<h1>Index.Html</h1>
-<p>This is a placeholder for index.html.</p>
+  <h1>Program Summary</h1>
+  
+<div class="team-section">
+  <strong>Overall Project Status:</strong>
+  <img src="img/blinking_stoplight_green.gif" class="stoplight" alt="Stoplight">
+  <p>Summary of sprint readiness and backlog health will be updated below based on latest Jira data.</p>
+</div>
+<div id="status"></div>
+
+  <footer>
+    📘 Metrics calculated per <a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum Best Practices</a>
+  </footer>
 </body>
 </html>
