@@ -21,7 +21,7 @@ function renderSprintReadiness(data) {
 
         const readyStatuses = team === "Engineering - Product"
             ? ["Ready for Development"]
-            : ["To Do", "Ready for Development"];
+            : ["Ready for Development", "To Do"];
 
         const readyCount = inFutureSprint.filter(d => readyStatuses.includes(d['Status'])).length;
         const totalCount = inFutureSprint.length;
@@ -49,7 +49,7 @@ function renderBacklogHealth(data) {
 
     for (const team in byTeam) {
         const stories = byTeam[team];
-        const backlog = stories.filter(d => !d['Sprint'] || !d['Sprint'].trim() === '');
+        const backlog = stories.filter(d => !d['Sprint'] || !d['Sprint'].includes("state=ACTIVE"));
         const healthy = backlog.filter(d => ['New', 'Grooming'].includes(d['Status']));
         const estimated = backlog.filter(d => d['Custom field (Story Points)'] || d['Custom field (Story point estimate)']);
 
@@ -84,7 +84,7 @@ function renderProgramSummary(data) {
     futureStories.forEach(d => {
         const team = d['Components'];
         const isReady = (team === 'Engineering - Product' && d['Status'] === 'Ready for Development') ||
-                        (team !== 'Engineering - Product' && ['To Do', 'Ready for Development'].includes(d['Status']));
+                        (team !== 'Engineering - Product' && ['Ready for Development', 'To Do'].includes(d['Status']));
         if (isReady) readyCount++;
     });
 
