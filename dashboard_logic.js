@@ -21,7 +21,7 @@ function renderSprintReadiness(data) {
 
         const readyStatuses = team === "Engineering - Product"
             ? ["Ready for Development"]
-            : ["Ready for Development", "To Do"];
+            : ["To Do", "Ready for Development"];
 
         const readyCount = inFutureSprint.filter(d => readyStatuses.includes(d['Status'])).length;
         const totalCount = inFutureSprint.length;
@@ -84,7 +84,7 @@ function renderProgramSummary(data) {
     futureStories.forEach(d => {
         const team = d['Components'];
         const isReady = (team === 'Engineering - Product' && d['Status'] === 'Ready for Development') ||
-                        (team !== 'Engineering - Product' && ['Ready for Development', 'To Do'].includes(d['Status']));
+                        (team !== 'Engineering - Product' && ['To Do', 'Ready for Development'].includes(d['Status']));
         if (isReady) readyCount++;
     });
 
