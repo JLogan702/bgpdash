@@ -35,7 +35,21 @@
 <body>
   <h1>Dependencies</h1>
   
-<div id="dependencies-content">Loading dependency data from jira_data.csv...</div>
+
+<div style="margin-bottom: 1rem;">
+  <label for="page-nav"><strong>Jump to:</strong></label>
+  <select id="page-nav" onchange="location.href=this.value;">
+    <option value="index.html">Program Summary</option>
+    <option value="sprint_readiness.html">Sprint Readiness</option>
+    <option value="backlog_health.html">Backlog Health</option>
+    <option value="dependencies.html">Dependencies</option>
+  </select>
+</div>
+
+<div class="team-section">
+  <strong>Team Dependencies Overview</strong>
+  <div id="dependencies-content">Loading...</div>
+</div>
 
   <footer>
     📘 Metrics calculated per <a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum Best Practices</a>

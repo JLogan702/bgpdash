@@ -35,7 +35,21 @@
 <body>
   <h1>Backlog Health</h1>
   
-<div id="backlog-health-content">Loading backlog health from jira_data.csv...</div>
+
+<div style="margin-bottom: 1rem;">
+  <label for="page-nav"><strong>Jump to:</strong></label>
+  <select id="page-nav" onchange="location.href=this.value;">
+    <option value="index.html">Program Summary</option>
+    <option value="sprint_readiness.html">Sprint Readiness</option>
+    <option value="backlog_health.html">Backlog Health</option>
+    <option value="dependencies.html">Dependencies</option>
+  </select>
+</div>
+
+<div class="team-section">
+  <strong>Backlog Health Overview</strong>
+  <div id="backlog-health-content">Loading...</div>
+</div>
 
   <footer>
     📘 Metrics calculated per <a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum Best Practices</a>

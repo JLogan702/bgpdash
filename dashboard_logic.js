@@ -1,4 +1,6 @@
 
+
+console.log("📊 Dashboard JS loaded.");
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
   const isSprint = path.includes("sprint_readiness");

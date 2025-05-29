@@ -35,12 +35,21 @@
 <body>
   <h1>Program Summary</h1>
   
+
+<div style="margin-bottom: 1rem;">
+  <label for="page-nav"><strong>Jump to:</strong></label>
+  <select id="page-nav" onchange="location.href=this.value;">
+    <option value="index.html">Program Summary</option>
+    <option value="sprint_readiness.html">Sprint Readiness</option>
+    <option value="backlog_health.html">Backlog Health</option>
+    <option value="dependencies.html">Dependencies</option>
+  </select>
+</div>
+
 <div class="team-section">
   <strong>Overall Project Status:</strong>
-  <img src="img/blinking_stoplight_green.gif" class="stoplight" alt="Stoplight">
-  <p>Summary of sprint readiness and backlog health will be updated below based on latest Jira data.</p>
+  <div id="status">Loading...</div>
 </div>
-<div id="status"></div>
 
   <footer>
     📘 Metrics calculated per <a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum Best Practices</a>
