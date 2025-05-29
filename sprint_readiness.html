@@ -6,20 +6,50 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    nav { margin-bottom: 20px; }
-    footer { margin-top: 40px; font-size: 0.9em; color: gray; }
-    img { vertical-align: middle; margin-right: 8px; }
-    h3 { margin-top: 24px; }
-  </style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 20px;
+      background-color: #f4f7fa; /* soft light blue-gray */
+      color: #333;
+    }
+
+    nav {
+      margin-bottom: 20px;
+      background-color: #e2e8f0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    select {
+      padding: 5px;
+      font-size: 1em;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    h1, h2, h3 {
+      color: #2a4365;
+    }
+
+    img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+</style>
 </head>
 <body>
   <nav>
     <label for="nav">Jump to:</label>
     <select id="nav" onchange="window.location.href=this.value;">
-      <option value="index.html">Program Summary</option>
+      <option value="index.html" >Program Summary</option>
       <option value="sprint_readiness.html" selected>Sprint Readiness</option>
-      <option value="backlog_health.html">Backlog Health</option>
+      <option value="backlog_health.html" >Backlog Health</option>
     </select>
   </nav>
 
@@ -46,4 +76,3 @@
   </script>
 </body>
 </html>
-
