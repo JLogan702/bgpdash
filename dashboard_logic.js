@@ -7,8 +7,8 @@ function groupBy(array, key) {
     }, {});
 }
 
-function isFutureSprint(sprintField) {
-    return sprintField && !sprintField.includes("state=ACTIVE");
+function isFutureSprint(sprintValue) {
+    return sprintValue && !sprintValue.includes("state=ACTIVE");
 }
 
 function renderSprintReadiness(data) {
@@ -17,9 +17,7 @@ function renderSprintReadiness(data) {
 
     for (const team in byTeam) {
         const stories = byTeam[team];
-        const inFutureSprint = stories.filter(d =>
-            isFutureSprint(d['Sprint']) || isFutureSprint(d['Sprint.1']) || isFutureSprint(d['Sprint.2'])
-        );
+        const inFutureSprint = stories.filter(d => isFutureSprint(d['Sprint']));
 
         const readyStatuses = team === "Engineering - Product"
             ? ["Ready for Development"]
@@ -79,8 +77,7 @@ function renderBacklogHealth(data) {
 
 function renderProgramSummary(data) {
     const futureStories = data.filter(d =>
-        d['Issue Type'] === 'Story' &&
-        (isFutureSprint(d['Sprint']) || isFutureSprint(d['Sprint.1']) || isFutureSprint(d['Sprint.2']))
+        d['Issue Type'] === 'Story' && isFutureSprint(d['Sprint'])
     );
 
     let readyCount = 0;
