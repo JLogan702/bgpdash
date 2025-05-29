@@ -49,7 +49,7 @@ function renderBacklogHealth(data) {
 
     for (const team in byTeam) {
         const stories = byTeam[team];
-        const backlog = stories.filter(d => !d['Sprint'] || !d['Sprint'].includes("state=ACTIVE"));
+        const backlog = stories.filter(d => !d['Sprint'] || !d['Sprint'].trim() === '');
         const healthy = backlog.filter(d => ['New', 'Grooming'].includes(d['Status']));
         const estimated = backlog.filter(d => d['Custom field (Story Points)'] || d['Custom field (Story point estimate)']);
 
