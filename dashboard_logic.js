@@ -1,1 +1,1 @@
-// JS for dynamic dashboard behavior (real version will parse CSV and render stoplights)
+// JS logic for parsing CSV and updating visuals
