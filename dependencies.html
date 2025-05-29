@@ -6,36 +6,29 @@
   <script src="dashboard_logic.js" defer></script>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
       padding: 2rem;
     }
     h1 {
       font-size: 2rem;
-      color: #333;
     }
     .team-section {
-      border: 1px solid #ccc;
       background: #fff;
+      border-radius: 8px;
       padding: 1rem;
       margin-bottom: 1rem;
-      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
     .stoplight {
-      width: 30px;
+      width: 32px;
       vertical-align: middle;
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
     }
   </style>
 </head>
 <body>
   <h1>Dependencies</h1>
   
-
 <div style="margin-bottom: 1rem;">
   <label for="page-nav"><strong>Jump to:</strong></label>
   <select id="page-nav" onchange="location.href=this.value;">
@@ -46,13 +39,19 @@
   </select>
 </div>
 
-<div class="team-section">
-  <strong>Team Dependencies Overview</strong>
+  <p>Identify cross-team blockers and dependency risks.</p>
   <div id="dependencies-content">Loading...</div>
-</div>
+  
+<hr>
+<footer style="font-size: 0.9rem; color: #555;">
+📘 Metrics aligned to:
+<ul>
+  <li><a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum.org – Definition of Ready</a></li>
+  <li><a href="https://www.atlassian.com/agile/scrum/sprint-planning" target="_blank">Atlassian – Sprint Planning</a></li>
+  <li><a href="https://www.mountaingoatsoftware.com/blog/the-role-of-backlog-grooming-in-scrum" target="_blank">Mountain Goat Software – Backlog Grooming</a></li>
+  <li><a href="https://scaledagileframework.com/pi-planning/" target="_blank">SAFe – PI Planning Guidelines</a></li>
+</ul>
+</footer>
 
-  <footer>
-    📘 Metrics calculated per <a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum Best Practices</a>
-  </footer>
 </body>
 </html>
