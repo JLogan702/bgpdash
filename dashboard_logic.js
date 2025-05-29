@@ -101,3 +101,37 @@ function renderProgramSummary(data) {
         <p>${readyCount} of ${total} story tickets across all teams in upcoming sprints are in a 'ready' status.</p>
     `;
 }
+
+
+function renderDependencies(data) {
+    const relevant = data.filter(d =>
+        d['Inward issue link (Blocks)'] || d['Outward issue link (Blocks)']
+    );
+
+    let html = `<table>
+        <thead>
+            <tr>
+                <th>Issue Key</th>
+                <th>Summary</th>
+                <th>Team</th>
+                <th>Status</th>
+                <th>Blocked By</th>
+                <th>Blocking</th>
+            </tr>
+        </thead>
+        <tbody>`;
+
+    relevant.forEach(d => {
+        html += `<tr>
+            <td>${d['Issue key']}</td>
+            <td>${d['Summary']}</td>
+            <td>${d['Components']}</td>
+            <td>${d['Status']}</td>
+            <td>${d['Inward issue link (Blocks)'] || ''}</td>
+            <td>${d['Outward issue link (Blocks)'] || ''}</td>
+        </tr>`;
+    });
+
+    html += `</tbody></table>`;
+    document.getElementById('content').innerHTML = html;
+}
