@@ -34,7 +34,7 @@ function renderSprintReadiness(data) {
         html += `
             <div style="margin-bottom: 20px;">
                 <h3>${team}</h3>
-                <img src="img/blinking_stoplight_${stoplight}.gif" alt="${stoplight}" width="40">
+                <img src="./img/blinking_stoplight_${stoplight}.gif" alt="${stoplight}" width="40">
                 <p><strong>${percentReady}% ready</strong> (${readyCount} of ${totalCount} story tickets in future sprints are in '${readyStatuses.join("' or '")}' status.)</p>
             </div>
         `;
@@ -65,7 +65,7 @@ function renderBacklogHealth(data) {
         html += `
             <div style="margin-bottom: 20px;">
                 <h3>${team}</h3>
-                <img src="img/blinking_stoplight_${stoplight}.gif" alt="${stoplight}" width="40">
+                <img src="./img/blinking_stoplight_${stoplight}.gif" alt="${stoplight}" width="40">
                 <p><strong>${percentHealthy}% backlog health</strong> (${healthyCount} of ${totalCount} story tickets in backlog are in 'New' or 'Grooming' status.)</p>
                 <p>${totalCount - estimatedCount} tickets are missing estimates.</p>
             </div>
@@ -96,12 +96,11 @@ function renderProgramSummary(data) {
     else if (percent >= 50) stoplight = 'yellow';
 
     document.getElementById('content').innerHTML = `
-        <img src="img/blinking_stoplight_${stoplight}.gif" alt="${stoplight}" width="60">
+        <img src="./img/blinking_stoplight_${stoplight}.gif" alt="${stoplight}" width="60">
         <h2>Overall Sprint Readiness: ${percent}%</h2>
         <p>${readyCount} of ${total} story tickets across all teams in upcoming sprints are in a 'ready' status.</p>
     `;
 }
-
 
 function renderDependencies(data) {
     const relevant = data.filter(d =>
