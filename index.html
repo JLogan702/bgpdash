@@ -1,57 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Program Summary</title>
-  <script src="dashboard_logic.js" defer></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f3f3;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    .team-section {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    .stoplight {
-      width: 32px;
-      vertical-align: middle;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Program Summary</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <script src="dashboard_logic.js" defer></script>
 </head>
 <body>
-  <h1>Program Summary</h1>
-  
-<div style="margin-bottom: 1rem;">
-  <label for="page-nav"><strong>Jump to:</strong></label>
-  <select id="page-nav" onchange="location.href=this.value;">
-    <option value="index.html">Program Summary</option>
-    <option value="sprint_readiness.html">Sprint Readiness</option>
-    <option value="backlog_health.html">Backlog Health</option>
-    <option value="dependencies.html">Dependencies</option>
-  </select>
-</div>
+    <h1>Program Summary</h1>
 
-  <p>This page summarizes readiness and backlog health across all 5 teams using Jira data.</p>
-  <div id="status-summary">Loading...</div>
-  
-<hr>
-<footer style="font-size: 0.9rem; color: #555;">
-📘 Metrics aligned to:
-<ul>
-  <li><a href="https://www.scrum.org/resources/what-scrum" target="_blank">Scrum.org – Definition of Ready</a></li>
-  <li><a href="https://www.atlassian.com/agile/scrum/sprint-planning" target="_blank">Atlassian – Sprint Planning</a></li>
-  <li><a href="https://www.mountaingoatsoftware.com/blog/the-role-of-backlog-grooming-in-scrum" target="_blank">Mountain Goat Software – Backlog Grooming</a></li>
-  <li><a href="https://scaledagileframework.com/pi-planning/" target="_blank">SAFe – PI Planning Guidelines</a></li>
-</ul>
-</footer>
+    <label for="navDropdown"><strong>Jump to:</strong></label>
+    <select id="navDropdown" onchange="location.href=this.value">
+        <option value="index.html" selected>Program Summary</option>
+        <option value="sprint_readiness.html">Sprint Readiness</option>
+        <option value="backlog_health.html">Backlog Health</option>
+        <option value="dependencies.html">Dependency Report</option>
+    </select>
 
+    <p>This page summarizes readiness and backlog health across all 5 teams using Jira data.</p>
+
+    <div class="summary-box">
+        <strong>Overall Project Status: </strong><img id="summaryStoplight" alt="Stoplight" width="25">
+        <p id="summaryPercent"></p>
+        <p>Summary of sprint readiness and backlog health is calculated based on real Jira data from your CSV.</p>
+    </div>
+
+    <div class="explanation">
+        <h3>Executive Summary</h3>
+        <p>This dashboard reflects team-level metrics around Sprint Readiness and Backlog Health across all 5 squads contributing to the Brand Growth Platform initiative. Metrics are sourced directly from Jira story ticket data and updated automatically.</p>
+        <p>Sprint Readiness reflects how many stories are ready in upcoming sprints based on statuses like "Ready for Development" and "To Do". Backlog Health measures grooming coverage across future sprints.</p>
+        <p>We aligned this report to established industry guidance from Agile and SAFe methodologies.</p>
+    </div>
+
+    <hr>
+    <p>📘 Metrics aligned to:</p>
+    <ul>
+        <li><a href="https://www.scrum.org/resources/definition-done" target="_blank">Scrum.org – Definition of Ready</a></li>
+        <li><a href="https://www.atlassian.com/agile/scrum/sprint-planning" target="_blank">Atlassian – Sprint Planning</a></li>
+        <li><a href="https://www.mountaingoatsoftware.com/blog/the-role-of-backlog-grooming-in-agile" target="_blank">Mountain Goat Software – Backlog Grooming</a></li>
+        <li><a href="https://scaledagileframework.com/pi-planning/" target="_blank">SAFe – PI Planning Guidelines</a></li>
+    </ul>
 </body>
 </html>
