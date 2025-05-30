@@ -1,0 +1,57 @@
+[
+  {
+    "team": "Engineering - Platform",
+    "total_stories": 26,
+    "readiness_pct": 0,
+    "readiness_light": "red",
+    "readiness_chart": "charts/Engineering - Platform_readiness.png",
+    "backlog_pct": 26.9,
+    "backlog_light": "red",
+    "backlog_chart": "charts/Engineering - Platform_backlog.png",
+    "dependencies": 0
+  },
+  {
+    "team": "Engineering - Product",
+    "total_stories": 49,
+    "readiness_pct": 0,
+    "readiness_light": "red",
+    "readiness_chart": "charts/Engineering - Product_readiness.png",
+    "backlog_pct": 87.8,
+    "backlog_light": "green",
+    "backlog_chart": "charts/Engineering - Product_backlog.png",
+    "dependencies": 2
+  },
+  {
+    "team": "Design",
+    "total_stories": 20,
+    "readiness_pct": 0,
+    "readiness_light": "red",
+    "readiness_chart": "charts/Design_readiness.png",
+    "backlog_pct": 35.0,
+    "backlog_light": "red",
+    "backlog_chart": "charts/Design_backlog.png",
+    "dependencies": 0
+  },
+  {
+    "team": "Engineering - AI Ops",
+    "total_stories": 13,
+    "readiness_pct": 0,
+    "readiness_light": "red",
+    "readiness_chart": "charts/Engineering - AI Ops_readiness.png",
+    "backlog_pct": 46.2,
+    "backlog_light": "red",
+    "backlog_chart": "charts/Engineering - AI Ops_backlog.png",
+    "dependencies": 0
+  },
+  {
+    "team": "Data Science",
+    "total_stories": 18,
+    "readiness_pct": 0,
+    "readiness_light": "red",
+    "readiness_chart": "charts/Data Science_readiness.png",
+    "backlog_pct": 5.6,
+    "backlog_light": "red",
+    "backlog_chart": "charts/Data Science_backlog.png",
+    "dependencies": 2
+  }
+]
