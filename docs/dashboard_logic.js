@@ -1,1 +1,1 @@
-// JS logic for parsing CSV and updating visuals
+// Placeholder: JS logic to load CSV, render charts, and control stoplights
