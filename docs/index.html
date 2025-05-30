@@ -1,1 +1,37 @@
-<!-- Placeholder: Final Program Summary with one stoplight and executive summary -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BGP Dashboard</title>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #f0f4f8; color: #333; margin: 0; padding: 20px; }
+    .nav { background: #004466; padding: 10px; color: white; }
+    .nav select { font-size: 16px; }
+    .section { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .footer { font-size: 14px; color: #666; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; }
+    canvas { max-width: 400px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<div class="nav">
+  <label for="nav">Navigate: </label>
+  <select id="nav" onchange="location = this.value;">
+    <option value="index.html">Program Summary</option>
+    <option value="sprint_readiness.html">Sprint Readiness</option>
+    <option value="backlog_health.html">Backlog Health</option>
+    <option value="dependencies.html">Dependencies</option>
+  </select>
+</div>
+<div class='section'><h1>Program Summary</h1><p>One overall stoplight below based on combined readiness + backlog health.</p><img src='img/blinking_green.gif' alt='Green' width='60'><canvas id='summaryChart'></canvas></div>
+<div class="footer">
+  <p><strong>References:</strong> 
+    <a href="https://www.scrum.org/resources/what-is-sprint-planning" target="_blank">Scrum.org: Sprint Planning</a> | 
+    <a href="https://scaledagileframework.com/pi-planning/" target="_blank">SAFe PI Planning</a> | 
+    <a href="https://www.mountaingoatsoftware.com/agile/user-stories" target="_blank">Mountain Goat Software: Agile Stories</a>
+  </p>
+  <p>This dashboard follows Agile reporting best practices to ensure visibility, accountability, and readiness across teams.</p>
+</div>
+</body></html>
