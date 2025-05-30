@@ -1,1 +1,0 @@
-// JS for dynamic dashboard behavior (real version will parse CSV and render stoplights)
